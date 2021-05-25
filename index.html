@@ -1,0 +1,219 @@
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./favicon-16x16.png"
+      sizes="16x16"
+    />
+    <style>
+      html {
+        box-sizing: border-box;
+        overflow: -moz-scrollbars-vertical;
+        overflow-y: scroll;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body {
+        margin: 0;
+        background: #fafafa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="swagger-ui"></div>
+
+    <script src="./swagger-ui-bundle.js" charset="UTF-8"></script>
+    <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"></script>
+    <script>
+      window.onload = function () {
+        // Begin Swagger UI call region
+        const ui = SwaggerUIBundle({
+          urls: [
+            {
+              url: "./data/fba-inbound-eligibility-api-model/fbaInbound.json",
+              name: "fba-inbound-eligibility-api-model",
+            },
+            {
+              url: "./data/finances-api-model/financesV0.json",
+              name: "finances-api-model",
+            },
+            {
+              url:
+                "./data/vendor-direct-fulfillment-orders-api-model/vendorDirectFulfillmentOrdersV1.json",
+              name: "vendor-direct-fulfillment-orders-api-model",
+            },
+            {
+              url: "./data/vendor-shipments-api-model/vendorShipments.json",
+              name: "vendor-shipments-api-model",
+            },
+            {
+              url: "./data/fba-small-and-light-api-model/fbaSmallandLight.json",
+              name: "fba-small-and-light-api-model",
+            },
+            {
+              url: "./data/orders-api-model/ordersV0.json",
+              name: "orders-api-model",
+            },
+            {
+              url:
+                "./data/vendor-direct-fulfillment-shipping-api-model/vendorDirectFulfillmentShippingV1.json",
+              name: "vendor-direct-fulfillment-shipping-api-model",
+            },
+            {
+              url: "./data/notifications-api-model/notifications.json",
+              name: "notifications-api-model",
+            },
+            {
+              url: "./data/messaging-api-model/messaging.json",
+              name: "messaging-api-model",
+            },
+            {
+              url: "./data/fba-inventory-api-model/fbaInventory.json",
+              name: "fba-inventory-api-model",
+            },
+            {
+              url:
+                "./data/fulfillment-outbound-api-model/fulfillmentOutbound_2020-07-01.json",
+              name: "fulfillment-outbound-api-model",
+            },
+            {
+              url: "./data/sellers-api-model/sellers.json",
+              name: "sellers-api-model",
+            },
+            {
+              url: "./data/authorization-api-model/authorization.json",
+              name: "authorization-api-model",
+            },
+            {
+              url: "./data/product-pricing-api-model/productPricingV0.json",
+              name: "product-pricing-api-model",
+            },
+            {
+              url: "./data/feeds-api-model/feeds_2021-06-30.json",
+              name: "feeds-api-model",
+            },
+            {
+              url: "./data/feeds-api-model/feeds_2020-09-04.json",
+              name: "feeds-api-model",
+            },
+            {
+              url:
+                "./data/vendor-direct-fulfillment-transactions-api-model/vendorDirectFulfillmentTransactionsV1.json",
+              name: "vendor-direct-fulfillment-transactions-api-model",
+            },
+            {
+              url: "./data/uploads-api-model/uploads_2020-11-01.json",
+              name: "uploads-api-model",
+            },
+            {
+              url:
+                "./data/merchant-fulfillment-api-model/merchantFulfillmentV0.json",
+              name: "merchant-fulfillment-api-model",
+            },
+            {
+              url: "./data/product-fees-api-model/productFeesV0.json",
+              name: "product-fees-api-model",
+            },
+            {
+              url: "./data/vendor-invoices-api-model/vendorInvoices.json",
+              name: "vendor-invoices-api-model",
+            },
+            {
+              url:
+                "./data/vendor-transaction-status-api-model/vendorTransactionStatus.json",
+              name: "vendor-transaction-status-api-model",
+            },
+            {
+              url: "./data/tokens-api-model/tokens_2021-03-01.json",
+              name: "tokens-api-model",
+            },
+            {
+              url:
+                "./data/aplus-content-api-model/aplusContent_2020-11-01.json",
+              name: "aplus-content-api-model",
+            },
+            {
+              url: "./data/services-api-model/services.json",
+              name: "services-api-model",
+            },
+            {
+              url: "./data/vendor-orders-api-model/vendorOrders.json",
+              name: "vendor-orders-api-model",
+            },
+            {
+              url: "./data/catalog-items-api-model/catalogItemsV0.json",
+              name: "catalog-items-api-model",
+            },
+            {
+              url:
+                "./data/catalog-items-api-model/catalogItems_2020-12-01.json",
+              name: "catalog-items-api-model",
+            },
+            {
+              url: "./data/sales-api-model/sales.json",
+              name: "sales-api-model",
+            },
+            {
+              url:
+                "./data/fulfillment-inbound-api-model/fulfillmentInboundV0.json",
+              name: "fulfillment-inbound-api-model",
+            },
+            {
+              url: "./data/shipping-api-model/shipping.json",
+              name: "shipping-api-model",
+            },
+            {
+              url: "./data/reports-api-model/reports_2020-09-04.json",
+              name: "reports-api-model",
+            },
+            {
+              url: "./data/reports-api-model/reports_2021-06-30.json",
+              name: "reports-api-model",
+            },
+            {
+              url:
+                "./data/vendor-direct-fulfillment-inventory-api-model/vendorDirectFulfillmentInventoryV1.json",
+              name: "vendor-direct-fulfillment-inventory-api-model",
+            },
+            {
+              url:
+                "./data/vendor-direct-fulfillment-payments-api-model/vendorDirectFulfillmentPaymentsV1.json",
+              name: "vendor-direct-fulfillment-payments-api-model",
+            },
+            {
+              url: "./data/solicitations-api-model/solicitations.json",
+              name: "solicitations-api-model",
+            },
+          ],
+
+          dom_id: "#swagger-ui",
+          deepLinking: true,
+          presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+          plugins: [SwaggerUIBundle.plugins.DownloadUrl],
+          layout: "StandaloneLayout",
+        });
+        // End Swagger UI call region
+
+        window.ui = ui;
+      };
+    </script>
+  </body>
+</html>
